@@ -1,0 +1,87 @@
+#root{
+  height: 100%;
+  width: 100%;
+}
+@widthList: {
+  100: 100px;
+  120: 120px;
+  150: 150px;
+  200: 200px;
+  250: 250px;
+  300: 300px;
+  400: 400px;
+};
+
+@marginLeftList: {
+  10: 10px;
+  15: 15px;
+  20: 20px;
+  30: 30px;
+  40: 40px;
+};
+html{
+  font-size: 120px;
+}
+@media screen and (max-width:1600px) {
+  html{
+    font-size: 100px;
+  }
+}
+
+body {
+  .func-label-width(@widthList);
+  .func-label-margin-left(@marginLeftList);
+  .func-form-label-width(@widthList);
+  .func-date-label-width(@widthList);
+}
+
+.c-search {
+  margin: 10px 0;
+
+  .c-search-item {
+    display: inline-block;
+
+    .c-search-label {
+      text-align: right;
+      padding-right: 20px;
+    }
+  }
+  .c-search-from {
+    display: flex;
+    .ant-form-item {
+      display: flex;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+.c-table {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px #d4dfe9;
+  .ant-table-body {
+    overflow: auto !important;
+  }
+}
+
+.c-search-btn {
+  text-align: center;
+}
+
+.c-pagination {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.c-center {
+  text-align: center;
+}

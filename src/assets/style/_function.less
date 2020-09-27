@@ -1,0 +1,38 @@
+.func-label-width(@width) {
+  each(@width, {
+      .c-w-@{key} {
+        display: inline-block;
+        width: @value  !important;
+      }
+    }
+
+  );
+}
+.func-date-label-width(@width) {
+  each(@width, {
+      .c-date-w-@{key} {
+        width: @value  !important;
+      }
+    }
+
+  );
+}
+
+.func-label-margin-left(@margin) {
+  each(@margin, {
+      .c-ml-@{key} {
+        margin-left: @value  !important;
+      }
+    }
+
+  );
+}
+.func-form-label-width(@margin) {
+  each(@margin, {
+      .c-form-label-@{key} .ant-form-item-label{
+        width: @value  !important;
+      }
+    }
+
+  );
+}
