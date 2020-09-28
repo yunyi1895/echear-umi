@@ -1,17 +1,15 @@
 /*
  * @Author: cmf
  * @Date: 2020-09-25 14:17:39
- * @LastEditTime: 2020-09-27 14:59:27
+ * @LastEditTime: 2020-09-28 15:08:10
  * @LastEditors: Please set LastEditors
  * @Description: 右侧的地图
  * @FilePath: \echear\src\pages\cloud\_part\Regional\index.tsx
  */
 import * as React from 'react';
 import { useState, useEffect, FC } from 'react';
-import { request } from 'umi';
-import echarts, {
-  ECharts
-} from 'echarts';
+
+import echarts, { ECharts } from 'echarts';
 import './index.less';
 import opt from './opt';
 export interface RegionalProps {}
@@ -26,7 +24,7 @@ const Regional: FC<RegionalProps> = props => {
 
     setMyChart(chart);
     const onResize = () => {
-      chart.resize();
+      //  chart.resize();
     };
     window.addEventListener('resize', onResize);
     return () => {
@@ -35,11 +33,10 @@ const Regional: FC<RegionalProps> = props => {
     };
   }, []);
   useEffect(() => {
-
-    if ( myChart) {
+    if (myChart) {
       myChart.setOption(opt);
     }
-  }, [ myChart]);
+  }, [myChart]);
   return (
     <div id="regional" className="regional">
       2222

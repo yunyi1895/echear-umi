@@ -1,7 +1,7 @@
 /*
  * @Author: cmf
  * @Date: 2020-09-24 13:24:58
- * @LastEditTime: 2020-09-25 14:03:11
+ * @LastEditTime: 2020-09-28 11:22:47
  * @LastEditors: Please set LastEditors
  * @Description: 市价总值排行Top10
  * @FilePath: \echear\src\pages\cloud\_part\Ranking.tsx
@@ -12,8 +12,7 @@ import echarts, { ECharts } from 'echarts';
 import './index.less';
 import chartsOpt from './chartsOpt';
 
-import {DataOpt,RankingProps} from '../../interface'
-
+import { DataOpt, RankingProps } from '../../interface';
 
 /**
  * 1、分析效果图需要用到哪些属性
@@ -24,7 +23,7 @@ import {DataOpt,RankingProps} from '../../interface'
  */
 
 const Ranking: FC<RankingProps> = props => {
-  const { style,chartData } = props;
+  const { style, chartData } = props;
   const [myChart, setMyChart] = useState<ECharts>();
   /**
    * @description: 添加图表配置
@@ -35,14 +34,17 @@ const Ranking: FC<RankingProps> = props => {
     const ranking = document.getElementById('ranking');
     const chart = echarts.init(ranking as HTMLDivElement);
     chart.setOption(chartsOpt);
-    setMyChart(chart)
-    const onResize = ()=>{
-      chart.resize()
-    }
-    window.addEventListener('resize',onResize)
-    return ()=>{ // 卸载绑定
-      window.removeEventListener('resize',onResize)
-    }
+    setMyChart(chart);
+    const onResize = () => {
+      // setTimeout(()=>{
+      //   chart.resize();
+      // },200)
+    };
+    window.addEventListener('resize', onResize);
+    return () => {
+      // 卸载绑定
+      window.removeEventListener('resize', onResize);
+    };
   }, []);
 
   /**
@@ -69,13 +71,9 @@ const Ranking: FC<RankingProps> = props => {
         ],
       });
     }
-  }, [myChart,chartData]);
+  }, [myChart, chartData]);
 
-  return (
-    <div style={style} id="ranking" className="ranking">
-
-    </div>
-  );
+  return <div style={style} id="ranking" className="ranking"></div>;
 };
 
 export default Ranking;

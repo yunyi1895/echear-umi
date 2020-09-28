@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect, FC, useRef } from 'react';
 import echarts, { ECharts } from 'echarts';
-import opt from './opt'
+import opt from './opt';
 import './index.less';
 interface TrendProps {}
 
@@ -11,12 +11,14 @@ const Trend: FC<TrendProps> = () => {
   useEffect(() => {
     //  const trend = document.getElementById('trend');
     if (trend.current) {
-      const chart = echarts.init(trend.current);
-      setChart(chart);
+      const c = echarts.init(trend.current);
+      setChart(c);
       const onResize = () => {
-        chart.resize();
+        setTimeout(() => {
+          c.resize();
+        }, 200);
       };
-      chart.setOption(opt);
+      c.setOption(opt);
       window.addEventListener('resize', onResize);
       return () => {
         window.removeEventListener('resize', onResize);

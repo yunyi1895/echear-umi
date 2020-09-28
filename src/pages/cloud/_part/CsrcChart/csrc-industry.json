@@ -1,0 +1,21 @@
+[
+  { "name": "农林牧渔", "value": 41 },
+  { "name": "采矿业", "value": 77 },
+  { "name": "制造业", "value": 999 },
+  { "name": "水电煤气", "value": 113 },
+  { "name": "建筑业", "value": 99 },
+  { "name": "批发零售", "value": 171 },
+  { "name": "运输仓储", "value": 107 },
+  { "name": "住宿餐饮", "value": 11 },
+  { "name": "信息技术", "value": 264 },
+  { "name": "金融业", "value": 91 },
+  { "name": "房地产", "value": 137 },
+  { "name": "商务服务", "value": 53 },
+  { "name": "科学服务", "value": 49 },
+  { "name": "公共环保", "value": 50 },
+  { "name": "居民服务", "value": 1 },
+  { "name": "教育", "value": 3 },
+  { "name": "卫生", "value": 10 },
+  { "name": "文化传播", "value": 58 },
+  { "name": "综合", "value": 22 }
+]
