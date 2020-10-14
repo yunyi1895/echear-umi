@@ -22,11 +22,16 @@ const routers: IRoute[] = [
         component: '@/pages/cloud/index',
       },
       {
-        path:'/',
-        redirect:'/home'
-      }
+        path: '/market',
+        exact: true,
+        component: '@/pages/market/index',
+      },
+      {
+        path: '/',
+        redirect: '/home',
+      },
     ],
-  }
+  },
 ];
 
 export default routers;

@@ -6,12 +6,17 @@ const menuData: Route[] = [
   {
     path: '/home',
     name: '首页',
-    icon:'icon-home'
+    icon: 'icon-home',
   },
   {
     path: '/cloud',
     name: '上市公司全景概览',
-    icon:'icon-cloud'
+    icon: 'icon-cloud',
+  },
+  {
+    path: '/market',
+    name: '上市公司销售信息',
+    icon: 'icon-market',
   },
   {
     path: '/asset',
@@ -19,8 +24,8 @@ const menuData: Route[] = [
   },
   {
     path: 'bill',
-    name: '账单'
-  }
+    name: '账单',
+  },
 ];
 
 export default menuData;
