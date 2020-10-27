@@ -20,6 +20,7 @@
     ]
   },
   "dependencies": {
+    "@amap/amap-jsapi-types": "^0.0.8",
     "@ant-design/pro-layout": "^6.4.14",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.22",
@@ -27,14 +28,19 @@
     "classnames": "^2.2.6",
     "echarts": "^4.9.0",
     "lint-staged": "^10.0.7",
+    "mapvgl": "^1.0.0-beta.81",
     "mockjs": "^1.1.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
+    "react-bmapgl": "^0.1.1",
     "react-dom": "^16.12.0",
     "umi": "^3.2.22",
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
+    "@2gis/mapgl": "^1.4.0",
+    "@amap/amap-jsapi-loader": "^0.0.4",
+    "@types/bmapgl": "^0.0.3",
     "@types/classnames": "^2.2.10",
     "@types/echarts": "^4.6.5",
     "@types/mockjs": "^1.0.3",

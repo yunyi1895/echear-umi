@@ -1,7 +1,7 @@
 /*
  * @Author: cmf
  * @Date: 2020-09-23 12:08:59
- * @LastEditTime: 2020-10-14 09:30:52
+ * @LastEditTime: 2020-10-27 15:56:25
  * @LastEditors: Please set LastEditors
  * @Description: layout 组件
  * @FilePath: \echear\src\pages\layout\index.tsx
@@ -16,6 +16,7 @@ import menuData from './_part/menuData';
 import menuItemRender from './_part/MenuItemRender';
 import loopMenuItem from './_part/LoopMenuItem';
 import '../../assets/style/index.less';
+import './index.less';
 interface LayoutProps extends IRouteComponentProps {}
 
 const Layout: FC<LayoutProps> = props => {
@@ -39,7 +40,9 @@ const Layout: FC<LayoutProps> = props => {
           routes: menuData,
         }}
       >
-        {children}
+        <div id="animated" className="animated">
+          {children}
+        </div>
       </ProLayout>
     </ConfigProvider>
   );

@@ -1,3 +1,9 @@
+// <reference path="node_modules/_@types_bmapgl@0.0.3@@types/bmapgl/index.d.ts" />
+/// <reference path="node_modules/@2gis/mapgl/global.d.ts" />
+// declare const BMapGL: any
+// declare const mapvgl: any
+declare const Loca: any;
+// declare const AMap: any
 declare module '*.css';
 declare module '*.less';
 declare module '*.png';
