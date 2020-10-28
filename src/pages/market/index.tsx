@@ -27,24 +27,21 @@ const Market: FC<MarketProps> = () => {
    * @return {type}
    */
   const handleDoubleClick = () => {
-    console.log('handleDoubleClick');
     setFull();
   };
   return (
     <PageView isShowCrumb={false}>
-      <Popover placement="right" content={content}>
-        <div
-          className="market"
-          onDoubleClick={() => handleDoubleClick()}
-          ref={marketRef}
-          id="market"
-        >
-          <TopView />
-          <SalesView />
-          <MapView />
-          <BottomView />
-        </div>
-      </Popover>
+      <div
+        className="market"
+        // onDoubleClick={() => handleDoubleClick()}
+        ref={marketRef}
+        id="market"
+      >
+        <TopView />
+        <SalesView />
+        <MapView />
+        <BottomView />
+      </div>
     </PageView>
   );
 };

@@ -95,20 +95,23 @@ const trasData = () => {
 };
 trasData();
 let opt: Opt = {
-  visualMap: [ //视觉映射组件 主要作用是数据分级
+  visualMap: [
+    //视觉映射组件 主要作用是数据分级
     //https://echarts.apache.org/zh/option.html#visualMap-piecewise.type
     {
       type: 'piecewise', //  分段型
       left: 10,
-      id:'122',
+      id: '122',
       bottom: 10,
       itemWidth: 27, // 宽度
       itemHeight: 15,
-      textStyle: { // 文字样式
+      textStyle: {
+        // 文字样式
         color: '#9aa8d4',
         fontSize: 14,
       },
-      pieces: [ // 自定义『分段式视觉映射组件（visualMapPiecewise）』的每一段的范围，以及每一段的文字，以及每一段的特别的样式
+      pieces: [
+        // 自定义『分段式视觉映射组件（visualMapPiecewise）』的每一段的范围，以及每一段的文字，以及每一段的特别的样式
         {
           min: 500,
           label: '>500',
@@ -128,10 +131,12 @@ let opt: Opt = {
           label: '无数据',
         },
       ],
-      inRange: {  // 定义 在选中范围中 的视觉元素
+      inRange: {
+        // 定义 在选中范围中 的视觉元素
         color: ['#B2CAE0', '#D2EAFF', '#8AC6FD', '#45A5F8'],
       },
-      outOfRange: { //定义 在选中范围外 的视觉元素
+      outOfRange: {
+        //定义 在选中范围外 的视觉元素
         color: ['#999999'],
       },
     },
@@ -146,14 +151,17 @@ let opt: Opt = {
     top: 0,
 
     layoutCenter: ['50%', '50%'], // 布局位置
-    label: { // 图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
-      emphasis: { // hover
+    label: {
+      // 图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
+      emphasis: {
+        // hover
         show: true,
       },
     },
-    itemStyle: { //地图区域的多边形 图形样式 比如每个省的边界样式
+    itemStyle: {
+      //地图区域的多边形 图形样式 比如每个省的边界样式
       normal: {
-      //  borderColor:'#f60',
+        //  borderColor:'#f60',
         borderColor: 'rgba(0,63,140,0.2)',
         shadowColor: 'rgba(0,63,140,0.2)',
         shadowOffsetY: 20,
@@ -167,11 +175,12 @@ let opt: Opt = {
   series: [
     {
       type: 'map',
-      geoIndex: 0,// 对应geo的id
+      geoIndex: 0, // 对应geo的id
       aspectScale: 0.75, // 这个参数用于 scale 地图的长宽比 默认 0.75
       zoom: 1,
       top: 0,
-      label: { //图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
+      label: {
+        //图形上的文本标签，可用于说明图形的一些数据信息，比如值，名称等
         normal: {
           show: true,
         },
@@ -179,7 +188,8 @@ let opt: Opt = {
           show: true,
         },
       },
-      itemStyle: { //地图区域的多边形 图形样式 如果 geo 里面设置了 已geo 为准
+      itemStyle: {
+        //地图区域的多边形 图形样式 如果 geo 里面设置了 已geo 为准
         normal: {
           areaColor: '#B2CAE0',
           borderColor: '#fff',

@@ -7,15 +7,15 @@
  * @FilePath: \echear\src\pages\layout\components\LoopMenuItem.tsx
  */
 import * as React from 'react';
-import  { MenuDataItem } from '@ant-design/pro-layout';
+import { MenuDataItem } from '@ant-design/pro-layout';
 import Icon from '@/components/Icon/Icon';
 const loopMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
-menus.map(({ icon, children, ...item }) => {
-  return {
-    ...item,
-    icon: icon && typeof icon === 'string' ? <Icon type={icon} /> : '',
-    children: children && loopMenuItem(children),
-  };
-});
+  menus.map(({ icon, children, ...item }) => {
+    return {
+      ...item,
+      icon: icon && typeof icon === 'string' ? <Icon type={icon} /> : '',
+      children: children && loopMenuItem(children),
+    };
+  });
 
-export default loopMenuItem
+export default loopMenuItem;

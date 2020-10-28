@@ -1,10 +1,10 @@
 export interface RankingProps {
   style?: React.CSSProperties;
-  chartData:DataOpt[]
+  chartData: DataOpt[];
 }
 
-export interface DataOpt{
-  name:string;
-  value:number;
-  type:number
+export interface DataOpt {
+  name: string;
+  value: number;
+  type: number;
 }

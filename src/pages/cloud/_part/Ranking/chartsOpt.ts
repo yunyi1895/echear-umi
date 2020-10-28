@@ -1,12 +1,14 @@
 import echarts, { EChartOption, EChartsResponsiveOption } from 'echarts';
 const opt: EChartOption | EChartsResponsiveOption = {
   title: {},
-  tooltip: { // 提示框
+  tooltip: {
+    // 提示框
     // 鼠标划入时候 展示的面板信息
     show: true,
-    trigger: 'axis',// hover 触发方式
-    axisPointer: { // 轴线显示配置
-      type: 'none',// 是否显示轴线
+    trigger: 'axis', // hover 触发方式
+    axisPointer: {
+      // 轴线显示配置
+      type: 'none', // 是否显示轴线
     },
   },
   grid: {
@@ -23,7 +25,7 @@ const opt: EChartOption | EChartsResponsiveOption = {
   yAxis: {
     type: 'category', //类目轴，适用于离散的类目数据
     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-    inverse:true,//反向
+    inverse: true, //反向
     axisLabel: {
       color: '#9aa8d4',
       fontSize: 12,
@@ -73,7 +75,8 @@ const opt: EChartOption | EChartsResponsiveOption = {
             },
           ]),
         },
-        emphasis: { // 鼠标hover 激活状态
+        emphasis: {
+          // 鼠标hover 激活状态
           color: new echarts.graphic.LinearGradient(0, 1, 1, 1, [
             {
               offset: 0,

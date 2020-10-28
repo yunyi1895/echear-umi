@@ -9,8 +9,8 @@
 
 import * as React from 'react';
 import { useState, useEffect, FC } from 'react';
-import  { MenuDataItem } from '@ant-design/pro-layout';
-import {  useHistory } from 'umi';
+import { MenuDataItem } from '@ant-design/pro-layout';
+import { useHistory } from 'umi';
 interface MenuItemRenderProps {
   item: MenuDataItem;
   dom: React.ReactNode;
@@ -38,4 +38,4 @@ const MenuItemRender: FC<MenuItemRenderProps> = props => {
     </a>
   );
 };
-export default MenuItemRender
+export default MenuItemRender;

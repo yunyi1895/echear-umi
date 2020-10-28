@@ -11,22 +11,23 @@ import { useState, useEffect, FC } from 'react';
 import { Card, Image } from 'antd';
 export interface CustomCardProps {
   title: string;
-  imgSrc:string;
-  routeUrl:string;
-  handleClick:(routeUrl:string)=>void;
+  imgSrc: string;
+  routeUrl: string;
+  handleClick: (routeUrl: string) => void;
 }
 
-const ss = require("@/assets/img/cloud/thumb.jpg")
+const ss = require('@/assets/img/cloud/thumb.jpg');
 
 const CustomCard: FC<CustomCardProps> = props => {
-  const { title ,imgSrc,handleClick,routeUrl} = props;
+  const { title, imgSrc, handleClick, routeUrl } = props;
   return (
-    <Card onClick={()=>handleClick(routeUrl)} hoverable={true} title={title} bordered={false}>
-      <Image
-        preview={false}
-        alt={title}
-        src={ss}
-      />
+    <Card
+      onClick={() => handleClick(routeUrl)}
+      hoverable={true}
+      title={title}
+      bordered={false}
+    >
+      <Image preview={false} alt={title} src={ss} />
     </Card>
   );
 };

@@ -6,3 +6,8 @@ package.json
 .umi
 .umi-production
 .umi-test
+_function.less
+/evdata-hydrogen-umi
+*.zip
+*.json
+/big-data
