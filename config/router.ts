@@ -27,6 +27,11 @@ const routers: IRoute[] = [
         component: '@/pages/market/index',
       },
       {
+        path: '/asset',
+        exact: true,
+        component: '@/pages/asset/index',
+      },
+      {
         path: '/',
         redirect: '/home',
       },

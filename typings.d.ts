@@ -1,5 +1,7 @@
 // <reference path="node_modules/_@types_bmapgl@0.0.3@@types/bmapgl/index.d.ts" />
 // <reference path="node_modules/@2gis/mapgl/global.d.ts" />
+
+declare module '@jiaminghi/data-view-react';
 declare const BMapGL: any; // 百度地图
 declare const mapvgl: any; // 百度地图可视化
 declare const mapv: any; // 百度地图mapv
