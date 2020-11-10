@@ -32,6 +32,18 @@ const routers: IRoute[] = [
         component: '@/pages/asset/index',
       },
       {
+        path: '/screen',
+        exact: false, // 不能精准匹配
+        component: '@/pages/screen/index',
+        routes: [
+          {
+            path: '/screen/car',
+            title: 'Car 页面',
+            component: '@/pages/screen/pages/car/index',
+          },
+        ],
+      },
+      {
         path: '/',
         redirect: '/home',
       },

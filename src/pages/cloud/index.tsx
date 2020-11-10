@@ -8,7 +8,7 @@
  */
 import * as React from 'react';
 import { useState, useEffect, useRef, CSSProperties } from 'react';
-import PageView from '@/components/PageView/index';
+import { PageView } from 'evdata';
 import { Row, Col, Popover } from 'antd';
 import { useInterval, useFullscreen } from 'ahooks';
 import Mock, { Random } from 'mockjs';

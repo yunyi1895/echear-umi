@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@amap/amap-jsapi-types": "0.0.8",
-    "@ant-design/pro-layout": "6.4.14",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "3.2.22",
     "bizcharts": "4.0.14",
@@ -40,12 +39,14 @@
   "devDependencies": {
     "@2gis/mapgl": "1.4.0",
     "@amap/amap-jsapi-loader": "0.0.4",
+    "@ant-design/pro-layout": "^6.5.13",
     "@jiaminghi/data-view-react": "1.2.3",
     "@types/bmapgl": "0.0.3",
     "@types/classnames": "2.2.10",
     "@types/echarts": "4.6.5",
     "@types/mockjs": "1.0.3",
     "ahooks": "2.8.1",
-    "cross-env": "7.0.2"
+    "cross-env": "7.0.2",
+    "evdata": "^0.1.6"
   }
 }

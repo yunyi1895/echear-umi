@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState, useEffect, FC, useRef } from 'react';
 import { Popover } from 'antd';
 import { useFullscreen } from 'ahooks';
-import PageView from '@/components/PageView/index';
+import { PageView } from 'evdata';
 import './index.less';
 import MapView from './_part/MapView';
 import BottomView from './_part/BottomView';

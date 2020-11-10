@@ -26,6 +26,11 @@ const menuData: Route[] = [
     path: 'bill',
     name: '账单',
   },
+  {
+    path: '/screen/car',
+    name: '大屏显示',
+    icon: 'icon-cloud',
+  },
 ];
 
 export default menuData;

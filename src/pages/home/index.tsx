@@ -10,7 +10,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { Row, Col, Divider } from 'antd';
 import { useHistory } from 'umi';
-import PageView from '@/components/PageView';
+import { PageView } from 'evdata';
 import CustomCard from './_part/CustomCard';
 import RowData from './_part/RowData';
 const style: React.CSSProperties = { background: '#0092ff', padding: '8px 0' };

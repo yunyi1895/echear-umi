@@ -22,23 +22,7 @@ enum ReadyState {
 const Asset = () => {
   const ref = useRef<HTMLDivElement>(null);
   const didUnmount = useRef(false);
-  const messageHistory = useRef([]);
-  // const [socketUrl, setSocketUrl] = useState('ws://11.11.11.84:8082/websocket/1');
-  const {
-    readyState,
-    sendMessage,
-    latestMessage,
-    disconnect,
-    connect,
-  } = useWebSocket('ws://11.11.11.84:8080/websocket/server', {
-    onMessage: e => {
-      console.log('onMessage', e);
-    },
-  });
 
-  const handleClickBtn = () => {
-    sendMessage && sendMessage('xxxx');
-  };
   return (
     <div className="asset">
       <FullScreenContainer>
@@ -59,13 +43,7 @@ const Asset = () => {
             </div>
           </div>
           <div className=" fx-4">
-            <Button
-              onClick={() => {
-                handleClickBtn();
-              }}
-            >
-              sendMessage
-            </Button>
+            <Button onClick={() => {}}>sendMessage</Button>
             {/* <L7 /> */}
           </div>
         </div>

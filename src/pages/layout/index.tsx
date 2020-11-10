@@ -15,15 +15,15 @@ import { IRouteComponentProps, useHistory } from 'umi';
 import menuData from './_part/menuData';
 import menuItemRender from './_part/MenuItemRender';
 import loopMenuItem from './_part/LoopMenuItem';
-import '../../assets/style/index.less';
+import 'evdata/dist/index.css';
 import './index.less';
 interface LayoutProps extends IRouteComponentProps {}
 
 const Layout: FC<LayoutProps> = props => {
   const { children, location } = props;
   const [pathname, setPathname] = useState('/');
-
-  if (location.pathname === '/asset') {
+  const [jumpPathname] = useState<string[]>(['/asset', '/screen/car']);
+  if (jumpPathname.indexOf(location.pathname) > -1) {
     return <>{children}</>;
   } else {
     return (
@@ -31,6 +31,8 @@ const Layout: FC<LayoutProps> = props => {
         <ProLayout
           className="proLayout"
           navTheme="light"
+          collapsedButtonRender={false}
+          collapsed={false}
           title="大屏数据可视化"
           location={{
             pathname: pathname,
