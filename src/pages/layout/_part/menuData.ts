@@ -27,7 +27,7 @@ const menuData: Route[] = [
     name: '账单',
   },
   {
-    path: '/screen/car',
+    path: '/screen/global',
     name: '大屏显示',
     icon: 'icon-cloud',
   },

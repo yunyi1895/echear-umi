@@ -1,7 +1,7 @@
 /*
  * @Author: cmf
  * @Date: 2020-09-23 12:08:59
- * @LastEditTime: 2020-11-06 10:36:56
+ * @LastEditTime: 2020-11-11 15:52:12
  * @LastEditors: Please set LastEditors
  * @Description: layout 组件
  * @FilePath: \echear\src\pages\layout\index.tsx
@@ -17,12 +17,13 @@ import menuItemRender from './_part/MenuItemRender';
 import loopMenuItem from './_part/LoopMenuItem';
 import 'evdata/dist/index.css';
 import './index.less';
+import '../../assets/style/flex.css';
 interface LayoutProps extends IRouteComponentProps {}
 
 const Layout: FC<LayoutProps> = props => {
   const { children, location } = props;
   const [pathname, setPathname] = useState('/');
-  const [jumpPathname] = useState<string[]>(['/asset', '/screen/car']);
+  const [jumpPathname] = useState<string[]>(['/asset', '/screen/global']);
   if (jumpPathname.indexOf(location.pathname) > -1) {
     return <>{children}</>;
   } else {

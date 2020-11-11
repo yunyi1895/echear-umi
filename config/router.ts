@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-11 01:00:09
+ * @LastEditTime: 2020-11-11 15:13:54
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /echear-umi/config/router.ts
+ */
 import { IRoute } from 'umi';
 const routers: IRoute[] = [
   {
@@ -37,9 +45,9 @@ const routers: IRoute[] = [
         component: '@/pages/screen/index',
         routes: [
           {
-            path: '/screen/car',
-            title: 'Car 页面',
-            component: '@/pages/screen/pages/car/index',
+            path: '/screen/global',
+            title: 'global 页面',
+            component: '@/pages/screen/pages/global/index',
           },
         ],
       },

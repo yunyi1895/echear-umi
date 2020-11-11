@@ -3,6 +3,7 @@ import { useState, useEffect, FC, useRef } from 'react';
 import {} from 'antd';
 import { useWebSocket } from 'ahooks';
 import './index.less';
+import { FullScreenContainer } from '@jiaminghi/data-view-react';
 interface ScreenProps {}
 const Screen: FC<ScreenProps> = props => {
   const { children } = props;
@@ -33,6 +34,10 @@ const Screen: FC<ScreenProps> = props => {
   const handleClickBtn = () => {
     sendMessage && sendMessage('xxxx');
   };
-  return <div className="screen-view">{children}</div>;
+  return (
+    <div className="screen-view">
+      <FullScreenContainer>{children}</FullScreenContainer>
+    </div>
+  );
 };
 export default Screen;
