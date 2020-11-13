@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-11-11 01:00:09
- * @LastEditTime: 2020-11-11 15:13:54
- * @LastEditors: your name
+ * @LastEditTime: 2020-11-13 15:59:03
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /echear-umi/config/router.ts
  */
@@ -45,9 +45,19 @@ const routers: IRoute[] = [
         component: '@/pages/screen/index',
         routes: [
           {
+            path: '/screen/world',
+            title: '新能源乘用车累计销量',
+            component: '@/pages/screen/pages/world/index',
+          },
+          {
             path: '/screen/global',
             title: 'global 页面',
             component: '@/pages/screen/pages/global/index',
+          },
+          {
+            path: '/screen/china',
+            title: '中国新能源销量数据',
+            component: '@/pages/screen/pages/china/index',
           },
         ],
       },

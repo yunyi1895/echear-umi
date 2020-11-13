@@ -1,7 +1,7 @@
 /*
  * @Author: cmf
  * @Date: 2020-09-23 12:08:59
- * @LastEditTime: 2020-11-11 15:52:12
+ * @LastEditTime: 2020-11-13 16:04:09
  * @LastEditors: Please set LastEditors
  * @Description: layout 组件
  * @FilePath: \echear\src\pages\layout\index.tsx
@@ -23,7 +23,12 @@ interface LayoutProps extends IRouteComponentProps {}
 const Layout: FC<LayoutProps> = props => {
   const { children, location } = props;
   const [pathname, setPathname] = useState('/');
-  const [jumpPathname] = useState<string[]>(['/asset', '/screen/global']);
+  const [jumpPathname] = useState<string[]>([
+    '/asset',
+    '/screen/global',
+    '/screen/china',
+    '/screen/world',
+  ]);
   if (jumpPathname.indexOf(location.pathname) > -1) {
     return <>{children}</>;
   } else {

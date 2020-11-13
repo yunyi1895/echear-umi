@@ -1,17 +1,24 @@
 /*
  * @Author: your name
  * @Date: 2020-11-11 15:17:21
- * @LastEditTime: 2020-11-11 17:58:47
+ * @LastEditTime: 2020-11-12 09:13:05
  * @LastEditors: Please set LastEditors
  * @Description: 全球乘用车销量
  * @FilePath: /echear-umi/src/pages/screen/pages/global/_part/Sales/index.tsx
  */
 import * as React from 'react';
-import { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC, RefObject, useImperativeHandle } from 'react';
 import {} from 'antd';
 import { Bg1 } from '@/components';
 import { Chart, Interval, Tooltip, Axis } from 'bizcharts';
-interface SalesProps {}
+
+export interface SalesExposeFunc {
+  add: () => void;
+}
+
+export interface SalesProps {
+  cRef: RefObject<SalesExposeFunc>;
+}
 const data = [
   { year: '1951 年', sales: 38 },
   { year: '1952 年', sales: 52 },
@@ -23,7 +30,15 @@ const data = [
   { year: '1962 年', sales: 38 },
 ];
 const Sales: FC<SalesProps> = props => {
-  const {} = props;
+  const { cRef } = props;
+  //useImperativeHandle 可以让你在使用 ref 时自定义暴露给父组件的实例值
+  useImperativeHandle(cRef, () => {
+    return {
+      add: () => {
+        console.log('调用子组件方法');
+      },
+    };
+  });
   return (
     <Bg1>
       <Chart

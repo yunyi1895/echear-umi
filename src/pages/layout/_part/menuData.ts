@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-11 18:07:39
+ * @LastEditTime: 2020-11-13 14:38:40
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /echear-umi/src/pages/layout/_part/menuData.ts
+ */
 import { MenuDataItem } from '@ant-design/pro-layout';
 interface Route extends MenuDataItem {
   routes?: Route[];
@@ -29,6 +37,11 @@ const menuData: Route[] = [
   {
     path: '/screen/global',
     name: '大屏显示',
+    icon: 'icon-cloud',
+  },
+  {
+    path: '/screen/china',
+    name: 'china',
     icon: 'icon-cloud',
   },
 ];
