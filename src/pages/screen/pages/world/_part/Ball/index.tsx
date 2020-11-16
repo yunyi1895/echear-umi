@@ -9,9 +9,9 @@ interface BallProps {}
 const Ball: FC<BallProps> = props => {
   const {} = props;
   return (
-    <>
+    <div className="ball">
       <img className="earth-gif" src={earthGif} alt="" />
-    </>
+    </div>
   );
 };
 export default Ball;
