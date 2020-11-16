@@ -1,7 +1,7 @@
 /*
  * @Author: cmf
  * @Date: 2020-09-23 12:08:59
- * @LastEditTime: 2020-11-13 16:04:09
+ * @LastEditTime: 2020-11-16 11:08:55
  * @LastEditors: Please set LastEditors
  * @Description: layout 组件
  * @FilePath: \echear\src\pages\layout\index.tsx
@@ -16,6 +16,7 @@ import menuData from './_part/menuData';
 import menuItemRender from './_part/MenuItemRender';
 import loopMenuItem from './_part/LoopMenuItem';
 import 'evdata/dist/index.css';
+
 import './index.less';
 import '../../assets/style/flex.css';
 interface LayoutProps extends IRouteComponentProps {}

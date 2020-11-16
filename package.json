@@ -23,6 +23,7 @@
     "@amap/amap-jsapi-types": "0.0.8",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "3.2.22",
+    "amfe-flexible": "^2.2.1",
     "bizcharts": "4.0.14",
     "classnames": "2.2.6",
     "echarts": "4.9.0",
@@ -47,6 +48,9 @@
     "@types/mockjs": "1.0.3",
     "ahooks": "2.8.1",
     "cross-env": "7.0.2",
-    "evdata": "^0.1.6"
+    "evdata": "^0.1.6",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-pxtorem": "^5.1.1"
   }
 }

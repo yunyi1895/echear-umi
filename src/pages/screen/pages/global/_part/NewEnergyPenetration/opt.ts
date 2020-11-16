@@ -1,13 +1,16 @@
 /*
  * @Author: your name
  * @Date: 2020-11-12 17:48:21
- * @LastEditTime: 2020-11-13 14:20:14
+ * @LastEditTime: 2020-11-16 15:37:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /echear-umi/src/pages/screen/pages/global/_part/NewEnergyPenetration/opt.ts
  */
 import echarts, { EChartOption, EChartsResponsiveOption } from 'echarts';
-
+function getSizeByScreen(num: number) {
+  // 这里的3200为你设计稿的宽度。
+  return Math.ceil((num / 1092) * window.screen.width);
+}
 export const colorList = [
   '#C6504F',
   '#4D4CDB',
@@ -86,7 +89,7 @@ const opt: EChartOption | EChartsResponsiveOption = {
       type: 'pie',
       selectedMode: false, // 不能选中
       radius: ['10%', '60%'],
-      center: ['40%', '55%'], // 圆心
+      center: ['39%', '57.5%'], // 圆心
       //   center: ['55%', '35%'],
       roseType: 'area',
       clockwise: false, // 逆时针

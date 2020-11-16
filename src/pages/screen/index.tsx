@@ -3,6 +3,7 @@ import { useState, useEffect, FC, useRef, useMemo } from 'react';
 import {} from 'antd';
 import { useLocation } from 'umi';
 import { useWebSocket } from 'ahooks';
+import 'amfe-flexible';
 import './index.less';
 import classnames from 'classnames';
 import { FullScreenContainer } from '@jiaminghi/data-view-react';

@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-11-11 01:00:10
- * @LastEditTime: 2020-11-12 17:45:38
- * @LastEditors: your name
+ * @LastEditTime: 2020-11-16 12:41:03
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /echear-umi/typings.d.ts
  */
@@ -10,6 +10,7 @@
 // <reference path="node_modules/@2gis/mapgl/global.d.ts" />
 
 declare module '@jiaminghi/data-view-react';
+declare module 'postcss-plugin-px2rem';
 // declare const BMapGL: any; // 百度地图
 declare const mapvgl: any; // 百度地图可视化
 declare const mapv: any; // 百度地图mapv

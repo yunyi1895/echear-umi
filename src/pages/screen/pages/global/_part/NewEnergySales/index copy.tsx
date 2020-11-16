@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-11 15:24:10
- * @LastEditTime: 2020-11-16 17:53:27
+ * @LastEditTime: 2020-11-16 16:52:46
  * @LastEditors: Please set LastEditors
  * @Description: 全球新能源车销量
  * @FilePath: /echear-umi/src/pages/screen/pages/global/_part/NewEnergySales/index.tsx
@@ -10,7 +10,7 @@ import * as React from 'react';
 import { useState, useEffect, FC } from 'react';
 import {} from 'antd';
 import { Bg1 } from '@/components';
-import { Chart, Interval, Tooltip, Axis, Legend, Annotation } from 'bizcharts';
+import { Chart, Interval, Tooltip, Axis, Legend } from 'bizcharts';
 interface NewEnergySalesProps {}
 const data = [
   { name: 'London', 月份: 'Jan.', 月均降雨量: 18.9 },
@@ -30,12 +30,17 @@ const data = [
   { name: 'Berlin', 月份: 'Jul.', 月均降雨量: 37.4 },
   { name: 'Berlin', 月份: 'Aug.', 月均降雨量: 42.4 },
 ];
-
+const scale = {
+  月均降雨量: {
+    alias: '(百万辆)', // 别名
+  },
+};
 const NewEnergySales: FC<NewEnergySalesProps> = props => {
   const {} = props;
   return (
     <Bg1>
       <Chart
+        scale={scale}
         height={'100%'}
         width={'100%'}
         padding={[110, 50, 50, 50]}
@@ -71,6 +76,16 @@ const NewEnergySales: FC<NewEnergySalesProps> = props => {
               },
             },
           }}
+          title={{
+            style: {
+              fill: '#fff',
+            },
+            offset: 19,
+            // @ts-ignore
+            rotate: Math.PI / 360,
+            // @ts-ignore
+            position: 'end',
+          }}
           line={{
             style: {
               fill: '#fff',
@@ -82,16 +97,6 @@ const NewEnergySales: FC<NewEnergySalesProps> = props => {
               fontSize: 12,
             },
           }}
-        />
-        <Annotation.Text
-          content="百万辆"
-          style={{
-            fontSize: 12,
-            fontWeight: 'normal',
-            fill: '#fff',
-            stroke: null,
-          }}
-          position={['-5%', '-4%']}
         />
         <Interval
           adjust={[
